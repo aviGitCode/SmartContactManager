@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org"  th:replace="~{NORMAL/Base::layout(~{::section})}">
+<head>
+	<meta charset="UTF-8" />
+	<title>this is home page</title>
+</head>
+<body>
+
+ <section class="update-contact">
+        <form th:action="@{/user/process-update}" method="post" enctype="multipart/form-data" th:object="${contact}" class="update-contact__form">
+            
+            <!-- Alert Message -->
+            <div th:if="${session.message}" 
+                 th:classappend="${session.message.type}" 
+                 class="alert-message">
+                <p th:text="${session.message.content}" class="alert-message__content"></p>
+                <th:block th:text="${@sessionHelper.removeMessageFromSession()}"></th:block>
+            </div>
+
+            <!-- Hidden Field -->
+            <input type="hidden" th:value="${contact.cId}" name="cId">
+
+            <h2 class="update-contact__title">Update Contact</h2>
+            <div class="update-contact__form-container">
+                
+                <!-- First Name -->
+                <div class="form-group">
+                    <label for="firstName" class="form-group__label">First Name</label>
+                    <div class="form-group__input-icon">
+                        
+                        <input th:value="${contact.name}" type="text" id="firstName" name="name"
+                               placeholder="Enter Name here" class="form-group__input" required>
+                    </div>
+                </div>
+
+                <!-- Second Name -->
+                <div class="form-group">
+                    <label for="secondName" class="form-group__label">Second Name</label>
+                    <div class="form-group__input-icon">
+                        
+                        <input th:value="${contact.secondName}" type="text" id="secondName" name="secondName"
+                               placeholder="Enter Second name here" class="form-group__input" required>
+                    </div>
+                </div>
+
+                <!-- Email -->
+                <div class="form-group">
+                    <label for="email" class="form-group__label">Email</label>
+                    <div class="form-group__input-icon">
+                      
+                        <input th:value="${contact.email}" type="email" id="email" name="email"
+                               placeholder="Enter email here" class="form-group__input" required>
+                    </div>
+                </div>
+
+                <!-- Phone -->
+                <div class="form-group">
+                    <label for="phone" class="form-group__label">Phone Number</label>
+                    <div class="form-group__input-icon">
+                        
+                        <input th:value="${contact.phone}" type="number" id="phone" name="phone"
+                               placeholder="Enter phone number here" class="form-group__input" required>
+                    </div>
+                </div>
+
+                <!-- Work -->
+                <div class="form-group">
+                    <label for="work" class="form-group__label">Work</label>
+                    <div class="form-group__input-icon">
+                       
+                        <input th:value="${contact.work}" type="text" id="work" name="work"
+                               placeholder="Enter your work here" class="form-group__input" required>
+                    </div>
+                </div>
+
+                <!-- Description -->
+                <div class="form-group form-group--full">
+                    <label for="description" class="form-group__label">Description</label>
+                    <textarea th:value="${contact.description}" name="description" id="description" rows="5"
+                              placeholder="Enter description here" class="form-group__textarea"></textarea>
+                </div>
+
+                <!-- Image Preview -->
+                <div class="update-contact__image-container">
+                    <img src="#" th:src="@{'/img/'+${contact.image}}" alt="Profile Pic" class="update-contact__profile-pic" />
+                </div>
+
+                <!-- New Image Upload -->
+                <div class="form-group form-group--full">
+                    <label for="image" class="form-group__label">Choose New Profile Pic</label>
+                    <input type="file" id="image" name="imageurl" class="form-group__file-input">
+                </div>
+            </div>
+
+            <button type="submit" class="btn-up btn--success">Update Contact</button>
+        </form>
+    </section>
+</body>
+</html>

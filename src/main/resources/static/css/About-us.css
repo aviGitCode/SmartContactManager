@@ -1,0 +1,69 @@
+  About Us Section Styling
+      .about-section {
+          position: relative;
+          padding: 50px 20px;
+          color: #fff;
+          text-align: center;
+         background: url('../img/cartooneImg.png.png')/* Replace URL with your image */
+          overflow: hidden;
+      }
+
+      .about-section::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.5); Semi-transparent overlay
+          z-index: 1;
+          opacity: 0;
+          transition: opacity 0.8s ease-in-out;
+      }
+
+      .about-section:hover::before {
+          opacity: 1; Smooth hover effect
+      }
+
+      .about-section h2 {
+          font-size: 36px;
+          margin-bottom: 20px;
+          text-transform: uppercase;
+          z-index: 2;
+          position: relative;
+      }
+
+      .about-section p {
+          font-size: 18px;
+          line-height: 1.8;
+          max-width: 800px;
+          margin: 0 auto;
+          z-index: 2;
+          position: relative;
+      }
+
+      Smooth Scroll Animation
+      html {
+          scroll-behavior: smooth;
+      }
+
+      Button Animation
+      a[href="#about"] {
+          position: relative;
+          overflow: hidden;
+      }
+
+      a[href="#about"]::after {
+          content: '';
+          position: absolute;
+          width: 0;
+          height: 2px;
+          bottom: 0;
+          left: 0;
+          background-color: #fff;
+          transition: all 0.4s ease-in-out;
+      }
+
+      a[href="#about"]:hover::after {
+          width: 100%; Hover effect on click link
+      }

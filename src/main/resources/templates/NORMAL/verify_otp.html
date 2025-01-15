@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{NORMAL/Base::layout(~{::section})}">
+<head>
+    <meta charset="UTF-8" />
+    <title>Private Dashboard</title>
+    <!-- Link to external CSS for the page styling -->
+    <link rel="stylesheet" href="/css/user-dashboard.css" />
+</head>
+<body>
+
+    <!-- Background image container -->
+   
+<section class="home-gradient-section">
+      <div class="otp-container">
+        <div class="otp-card">
+            <h1>OTP Verification</h1>
+            <p>Enter the 6-digit code sent to your registered email or phone number.</p>
+            <form action="/verify-otp" method="POST" class="otp-form">
+                <div class="otp-inputs">
+                    <input type="text" maxlength="1" class="otp-input" required>
+                    <input type="text" maxlength="1" class="otp-input" required>
+                    <input type="text" maxlength="1" class="otp-input" required>
+                    <input type="text" maxlength="1" class="otp-input" required>
+                    <input type="text" maxlength="1" class="otp-input" required>
+                    <input type="text" maxlength="1" class="otp-input" required>
+                </div>
+                <button type="submit" class="btn">Verify</button>
+                <p class="resend-link">
+                    Didn’t receive the code? <a href="/resend-otp">Resend OTP</a>
+                </p>
+            </form>
+        </div>
+    </div>
+        
+    </div>
+</section>
+
+</body>
+</html>

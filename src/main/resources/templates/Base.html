@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:fragment="layout(content)">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+   <!--  <link rel="stylesheet" th:href="@{/css/style.css}" /> -->
+    <link rel="stylesheet" th:href="@{/css/base1.css}" />
+    <link rel="stylesheet" th:href="@{/css/login.css}" />
+    <link rel="stylesheet" th:href="@{/css/signup.css}" />
+    <link rel="stylesheet" th:href="@{/css/home.css}" />
+    <link rel="stylesheet" th:href="@{/css/footer.css}" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title th:text="${title}">Base Html</title>
+    
+  </head>
+  <body>
+ 
+    <!-- Navbar starts here -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm ">
+      <div class="container-fluid">
+       <img alt="logo" src="/img/LOGO3.png/">
+       <!--  <a class="navbar-brand" href="#" th:href="@{/}"></a> -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" th:href="@{/}" data-tooltip="Go to Home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" th:href="@{/signin}" data-tooltip="Login to your account">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" data-tooltip="Logout of your account">Logout</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" th:href="@{/signup}" data-tooltip="Sign up for an account">Signup</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar ends here -->
+
+   
+
+
+    <div th:replace="${content}"></div>
+    
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-section about">
+        
+       
+            <h2>Smart Contact Manager</h2>
+            <p>
+                Your trusted solution for managing contacts effortlessly and securely. 
+                Stay organized and connected with our advanced tools.
+            </p>
+        </div>
+        <div class="footer-section links">
+            <h2>Quick Links</h2>
+            <ul>
+                <li><a th:href="@{/}">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="/singnup">Privacy Policy</a></li>
+            </ul>
+        </div>
+        <div class="footer-section contact">
+            <h2>Get in Touch</h2>
+            <ul>
+                <li><i class="fas fa-envelope"></i> <a href="mailto:support@smartcontactmanager.com">avinashkhot351@gmail.com</a></li>
+                <li><i class="fas fa-phone"></i> <a href="tel:+18005551234">+91-773-883-6093</a></li>
+                <li><i class="fas fa-map-marker-alt"></i> Airoli, Navi Mumbai</li>
+            </ul>
+            <div class="social-icons">
+                <a href="https://facebook.com" target="_blank" aria-label="Facebook" class="social-icon">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://instagram.com" target="_blank" aria-label="Instagram" class="social-icon">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn" class="social-icon">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://wa.me/18005551234" target="_blank" aria-label="WhatsApp" class="social-icon">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Smart Contact Manager | Designed with ❤️ in Navi Mumbai</p>
+    </div>
+</footer>
+
+
+    <!-- Optional JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script th:src="@{js/script.js}"></script>
+  </body>
+</html>

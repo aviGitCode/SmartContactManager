@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+    th:replace="~{NORMAL/Base::layout(~{::section})}">
+<head>
+    <meta charset="UTF-8" />
+    <title>Contact Details</title>
+</head>
+<body>
+
+<section class="contact-detail-section">
+    <div class="contact-detail-container" th:if="${contact}">
+        <div class="contact-detail-card">
+            <div class="contact-detail-img">
+
+                <div th:if="${session.message}"
+                    th:classappend="${session.message.type}" class="contact-alert">
+                    <p th:text="${session.message.content}"></p>
+                    <th:block th:text="${@sessionHelper.removeMessageFromSession()}"></th:block>
+                </div>
+
+                <img class="contact-profile-pic" alt="Profile Photo"
+                    th:src="${contact.getImage != null} ? @{'/img/' + ${contact.getImage}} : @{'/img/contact.ico'}"
+                    src="">
+            </div>
+
+            <div class="contact-info">
+                <div class="contact-info-item">
+                    <h3>Work</h3>
+                    <p th:text="${contact.work}"></p>
+                </div>
+
+                <div class="contact-info-item">
+                    <h3>Email</h3>
+                    <p th:text="${contact.email}"></p>
+                </div>
+
+                <div class="contact-info-item">
+                    <h3>Phone</h3>
+                    <p th:text="${contact.phone}"></p>
+                </div>
+
+                <div class="contact-info-item">
+                    <h3>Description</h3>
+                    <p th:text="${contact.description}"></p>
+                </div>
+            </div>
+
+            <!-- Button Row -->
+            <div class="button-row">
+                <!-- Update Button -->
+                <a th:href="@{'/user/update-contact/'+${contact.cId}}">
+                    <button type="submit" class="contact-btn-update">Update</button>
+                </a>
+
+                <!-- Delete Button -->
+                <a href="#" th:href="@{'/user/Delete/'+${contact.cId}}">
+                    <button type="button" class="contact-btn-delete">Delete</button>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,113 @@
+/* General Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Setting Section */
+.setting-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+/* Password Card Styling */
+.password-card {
+    width: 100%;
+    max-width: 400px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Title */
+.password-title {
+    font-size: 1.8em;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Alert Message Styling */
+.password-alert {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-size: 1.1em;
+}
+
+/* Form Styling */
+.password-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Input Container */
+.password-input-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.password-input-container input {
+    padding: 10px;
+    font-size: 1em;
+    color: #333;
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    margin-top: 5px;
+}
+
+/* Submit Button */
+.password-submit-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.password-submit-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Link Back to Profile */
+.back-to-profile-link {
+    display: inline-block;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1em;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.back-to-profile-link:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 768px) {
+    .password-card {
+        width: 90%;
+    }
+
+    .password-submit-btn {
+        font-size: 1em;
+    }
+}

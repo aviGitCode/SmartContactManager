@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{NORMAL/Base::layout(~{::section})}">
+<head>
+	<meta charset="UTF-8" />
+	<title>this is home page</title>
+</head>
+<body>
+
+  <section class="profile-main-section">
+    <div class="profile-user-details">
+      <div class="profile-image">
+        <img src="#" th:src="@{'/img/defulte.png'}" alt="" class="profile-picture">
+      </div>
+      <div class="profile-data">
+        <h4>Hi!</h4><h2 th:text="${user.name}" class="user-name">Olivia Gomez</h2>
+        <span th:text="${user.email}" class="user-email">Developer & Designer</span>
+      </div>
+    
+      <div class="profile-buttons">
+        <a href="#" th:href="@{/user/index}" class="profile-btn">back</a>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

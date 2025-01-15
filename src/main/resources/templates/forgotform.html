@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org"  th:replace="~{NORMAL/Base::layout(~{::section})}">
+<head>
+	<meta charset="UTF-8" />
+	<title>this is home page</title>
+</head>
+<body>
+
+
+	<section>
+ <div class="container">
+        <h2>Gmail OTP Validation</h2>
+        
+        <form id="email-form" th:action="@{/send-otp}" method="post">
+            <input type="email" id="email" name="email" placeholder="Enter your Gmail" required>
+            <input type="submit" value="Send OTP">
+        </form>
+
+     
+
+        <div class="message" id="message"></div>
+    </div>
+</section>
+	
+</body>
+</html>

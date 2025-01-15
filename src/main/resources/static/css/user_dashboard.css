@@ -1,0 +1,55 @@
+/* Gradient Background Section */
+.home-gradient-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    background: radial-gradient(circle at center, #ffffff, #f7e1e3, #cce3e9, #e3e1fa);
+}
+
+/* Centered Content */
+.text-center-content {
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Small Heading (Startup 3) */
+.small-heading {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #444;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+}
+
+/* 3D Bold Heading (Blocks) */
+.home-bold-title {
+    font-size: 4rem;
+    font-weight: 900;
+    color: #272727;
+    margin: 0;
+    text-shadow: 2px 2px 0px #c5c5c5, 4px 4px 0px #e3e3e3;
+}
+
+/* Paragraph Styling */
+.home-paragraph {
+    font-size: 1.2rem;
+    color: #555;
+    margin-top: 15px;
+    letter-spacing: 0.5px;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

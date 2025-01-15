@@ -1,0 +1,581 @@
+/* * {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.body {
+	font-family: Arial, sans-serif;
+	
+}
+
+body {
+	background-image: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)),
+		url(../img/banner.jpg.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	color: white;
+	height: 100vh;
+	
+	
+}
+
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem 2rem;
+	background-color:  #D3CAE2 , #E6C17A;
+	color: #fff;
+	font-style: oblique 40deg;
+	margin: 25px,25px,
+}
+
+.navbar-brand {
+	font-size: 1.4rem;
+	font-weight: italic;
+	
+}
+
+.navbar-links {
+	list-style: none;
+	display: flex;
+}
+
+.navbar-links li {
+	margin-left: 1.5rem;
+	position: relative;
+}
+
+.navbar-links a {
+	color: #fff;
+	text-decoration: none;
+	padding: 0.5rem 1rem;
+	transition: background-color 0.3s;
+}
+
+.navbar-links a:hover {
+	background-color: #46b3a9;
+	border-radius: 4px;
+}
+
+Popover styling
+.navbar-links a::after {
+	content: attr(data-tooltip);
+	position: absolute;
+	bottom: -2rem;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: #46b3a9;
+	color: #fff;
+	padding: 0.4rem 0.8rem;
+	border-radius: 4px;
+	font-size: 0.75rem;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.3s;
+	white-space: nowrap;
+}
+
+.navbar-links a:hover::after {
+	opacity: 1;
+	visibility: visible;
+}
+
+
+
+Assuming the text is within a container with the class "content"
+Import a cursive font from Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;           
+    font-size: 1rem;         
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    font-family: 'Dancing Script', cursive; 
+}
+
+
+
+
+
+ button {
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            font-weight: bold;
+            color: #fff;
+            background-color: #1d7164;
+            border: 2px solid #1d7164;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        button:hover {
+            background-color: #fff;
+            color: #1d7164;
+            border-color: #1d7164;
+            transform: translateY(-2px);
+            box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        Button animation effect
+        button:active {
+            transform: scale(0.95);
+        }
+
+
+
+
+
+Apply existing styles from your project
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(../img/banner.jpg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+    height: 100vh;
+}
+
+Navbar styles (from your existing CSS)
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #81CAD6 ;
+    color: #fff;
+    font-style: oblique 40deg;
+}
+
+Signup form styles
+.signup-container {
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: 10px;
+    width: 400px;
+   
+    color: white;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    margin-top: 5px;
+    margin-bottom: 1px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.signup-container:hover {
+    transform: scale(1.02);
+}
+
+.signup-container h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #1d7164;
+}
+
+.form-group {
+    margin-bottom: 0.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.form-group input:hover,
+.form-group textarea:hover {
+    border-color: #1d7164;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #1d7164;
+    border: 2px solid #1d7164;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #fff;
+    color: #1d7164;
+    border-color: #1d7164;
+    transform: translateY(-2px);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+button.reset {
+    background-color: #ff6b6b;
+    border-color: #ff6b6b;
+}
+
+button.reset:hover {
+    background-color: #fff;
+    color: #ff6b6b;
+    border-color: #ff6b6b;
+}
+
+Add cursive font to form title
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+Style for the checkbox
+input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+Add margin at the top to push the form below the navbar
+.signup-container {
+    width: 600px; Set desired width
+    min-height: 400px; Set minimum height
+    max-width: 90%; Prevent overflow
+    padding: 1.5rem; Adjust padding for compactness
+    margin-top: 100px; Add top margin to move form below navbar
+}
+
+Optional: Adjust margin-top for smaller screens
+@media (max-width: 768px) {
+    .signup-container {
+        margin-top: 70px; Adjust top margin for tablets
+    }
+}
+
+@media (max-width: 576px) {
+    .signup-container {
+        margin-top: 50px; Adjust top margin for mobile
+        width: 100%;
+        padding: 1rem;
+    }
+}
+
+
+
+.signup-container {
+    width: 600px;
+    min-height: auto;
+    max-width: 90%;
+    padding: 1.5rem;
+    margin-top: 3%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.form-check {
+    display: flex;
+    align-items: center;
+}
+
+.form-check-input {
+    width: 20px; Set a reasonable width for the checkbox
+    height: 20px; Set a reasonable height for the checkbox
+    margin-right: 10px; Space between checkbox and label
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.form-check-input:hover {
+    box-shadow: 0 0 5px #007bff;
+    transform: scale(1.1);
+}
+
+.form-check label {
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.form-check label:hover {
+    color: #007bff;
+}
+
+
+
+
+
+
+
+
+
+
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.is-invalid {
+    border-color: #dc3545; Red border for invalid fields
+}
+
+.invalid-feedback {
+    color: #dc3545; Red text for error messages
+    font-size: 14px;
+}
+
+.form-check {
+    display: flex;
+    align-items: center;
+}
+
+.form-check-input {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.form-buttons button {
+    padding: 10px 20px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.form-buttons button[type="submit"] {
+    background-color: #28a745; Green submit button
+}
+
+.form-buttons button[type="reset"] {
+    background-color: #dc3545; Red reset button
+}
+
+.form-buttons button:hover {
+    opacity: 0.9;
+}
+
+
+
+// for login page 
+
+
+
+General Styling
+body {
+    font-family: Arial, sans-serif;
+    background: url('../img/banner.jpg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+Navbar Styling
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 65px; Adjust according to your navbar height
+     background: linear-gradient(to right, #46b3a9, #E6C17A); Keep your navbar's color    (HERE COLORE CHANGES )  
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 1000; Ensure navbar is above the content
+}
+
+Login Container
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin-top: 210px; Added margin to move the form below the navbar
+}
+
+Login Box
+.login-box {
+    background: rgba(0, 0, 0, 0.2); Keep the transparent background
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    backdrop-filter: blur(5px); Optional: Keeps the blur effect
+}
+
+Login Heading
+.login-box h2 {
+    font-size: 2.5rem; Large heading size
+    margin-bottom: 20px;
+    color: #FFFFFF; Keep your color
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.login-box h2:hover {
+    color: #4CAF50; Hover color
+    transform: scale(1.1); Hover animation
+}
+
+Input Container
+.input-container {
+    position: relative;
+    margin: 20px 0;
+}
+
+Icon and Input Fields
+.input-container i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+}
+
+
+
+
+
+.input-container input {
+    width: 100%;
+    padding: 10px 15px;
+    padding-left: 30px; Space for the icon
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: transparent; Transparent background
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.input-container input:focus {
+    border-color: #4CAF50; Green border on focus
+}
+
+Submit Button
+
+ button {
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            font-weight: bold;
+            color: #fff;
+            background-color: #1d7164;
+            border: 2px solid #1d7164;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            
+            
+           
+        }
+
+        button:hover {
+            background-color: #fff;
+            color: #1d7164;
+            border-color: #1d7164;
+            transform: translateY(-2px);
+            box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        Button animation effect
+        button:active {
+            transform: scale(0.95);
+        }
+
+
+button:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+Links Section
+.links {
+    margin-top: 15px;
+}
+
+.links a {
+    color: #888;
+    text-decoration: none;
+    font-size: 0.9rem;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.links a:hover {
+    color: #4CAF50; Hover effect on links
+}
+
+Responsive Design
+@media (max-width: 600px) {
+    .login-box {
+        padding: 30px;
+    }
+
+    .login-box h2 {
+        font-size: 2rem; Slightly smaller heading on smaller screens
+    }
+  
+}
+
+
+
+ */

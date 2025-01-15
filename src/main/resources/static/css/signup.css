@@ -1,0 +1,129 @@
+/* General Body Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  line-height: 1.6;
+  padding-top: 60px; /* Ensures content does not overlap with navbar */
+}
+
+/* Content Section Styling */
+.content-custom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f9;
+}
+
+/* Signup Container Styling */
+.signup-container-custom {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 100%;
+}
+
+.signup-title-custom {
+  font-size: 1.8em;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Alert Styling */
+.alert-custom {
+  padding: 15px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+.alert-custom .alert-danger {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.alert-custom .alert-success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+/* Form Group Styling */
+.form-group-custom {
+  margin-bottom: 20px;
+}
+
+.form-group-custom label {
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+.form-group-custom input,
+.form-group-custom textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+}
+
+.form-group-custom textarea {
+  resize: vertical;
+  height: 120px;
+}
+
+/* Input Error Styling */
+.is-invalid-custom {
+  border-color: #dc3545;
+}
+
+.invalid-feedback-custom {
+  color: #dc3545;
+  font-size: 0.9em;
+}
+
+/* Checkbox Styling */
+.form-check-custom {
+  margin-bottom: 20px;
+}
+
+.form-check-input-custom {
+  margin-right: 10px;
+}
+
+/* Form Buttons Styling */
+.form-buttons-custom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.submit-btn-custom,
+.reset-btn-custom {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 4px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn-custom:hover,
+.reset-btn-custom:hover {
+  background-color: #0056b3;
+}
+
+/* Custom Styling for Reset Button */
+.reset-btn-custom {
+  background-color: #f8f9fa;
+  color: #007bff;
+  border: 1px solid #007bff;
+}
+
+.reset-btn-custom:hover {
+  background-color: #e2e6ea;
+}

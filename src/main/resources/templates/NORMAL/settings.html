@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+    th:replace="~{NORMAL/Base::layout(~{::section})}">
+<head>
+    <meta charset="UTF-8" />
+    <title>Change Password</title>
+</head>
+<body>
+
+<section class="setting-section">
+    <div class="password-card">
+        <!-- Logo image -->
+        <!-- <img src="logo.png" alt="Logo"> -->
+        <h2 class="password-title">Change Password</h2>
+
+        <!-- Session Messages -->
+        <div th:if="${session.message}"
+             th:classappend="${session.message.type}" class="password-alert">
+            <p th:text="${session.message.content}"></p>
+            <th:block th:text="${@sessionHelper.removeMessageFromSession()}"></th:block>
+        </div>
+
+        <form action="#" th:action="@{/user/change-password}" method="post" class="password-form">
+            <!-- Input for current password with lock icon -->
+            <div class="password-input-container">
+                <input type="password" name="oldPassword" placeholder="Current Password" required class="password-input">
+            </div>
+
+            <!-- Input for new password with key icon -->
+            <div class="password-input-container">
+                <input type="password" name="newPassword" placeholder="New Password" required class="password-input">
+            </div>
+
+            <!-- Submit button -->
+            <button type="submit" class="password-submit-btn">Update Password</button>
+        </form>
+
+        <!-- Link back to profile -->
+        <a href="/profile" th:href="@{/user/profile}" class="back-to-profile-link">Back to Profile</a>
+    </div>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{Base::layout(~{::section})}">
+<head>
+    <meta charset="UTF-8" />
+    <title>Home Page</title>
+    <!-- CSS Link -->
+    <link rel="stylesheet" th:href="@{/css/home-style.css}" />
+</head>
+<body>
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+   
+        <div class="container">
+        <img src="/img/heroBG.jpg/" alt="bg" />
+            <h2>Effortlessly Manage Your Contacts</h2>
+            <p>Stay organized and maintain meaningful connections with our modern Contact Management System.</p>
+            <a href="#features" class="btn">Explore Now</a>
+        </div>
+    </section>
+
+<section class="home-gradient-section">
+    <div class="text-center-content">
+   
+    
+        <p class="small-heading">project 01</p>
+        <h1 class="home-bold-title">Smart Contact Maneger</h1>
+        <p class="home-paragraph">
+            Start collecting your contacts in a smarter way. We provide
+                an efficient and innovative solution for managing your contacts.
+        </p>
+        
+    </div>
+</section>
+
+
+
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <h3>Features</h3>
+            <div class="feature-grid">
+                <div class="feature">
+                    <h4>Easy Management</h4>
+                    <p>Quickly add, edit, and organize your contacts.</p>
+                </div>
+                <div class="feature">
+                    <h4>Secure</h4>
+                    <p>Your data is protected with advanced security measures.</p>
+                </div>
+                <div class="feature">
+                    <h4>Customizable</h4>
+                    <p>Personalize your dashboard to suit your needs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="about-section">
+    <img src="/img/cartooneImg.png.png" alt="img" />
+    <h2>About Us</h2>
+    <p>
+        Welcome to <strong>Smart Contact Manager</strong>, your ultimate solution for managing and organizing your contacts effortlessly. 
+        Our platform is designed to simplify your daily tasks by offering advanced tools for secure and reliable contact management. 
+        With a user-friendly interface and powerful features, we aim to help you stay connected and productive.
+    </p>
+</section>
+
+
+    <!-- Team Section -->
+    <section class="team">
+        <div class="container">
+            <h3>Use The Technology</h3>
+            <div class="team-member">
+                <img src="/img/html-css.png" alt="Member 1">
+                <h4>Html/Css</h4>
+                <p>Front End</p>
+            </div>
+            <div class="team-member">
+                <img src="/img/springBoot.png" alt="Member 2">
+                <h4>spring Boot</h4>
+                <p>Back End</p>
+            </div>
+            <div class="team-member">
+                <img src="/img/mysql.png" alt="Member 3">
+                <h4>Mysql</h4>
+                <p>database</p>
+            </div>
+            
+        </div>
+    </section>
+<script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>
+
+</body>
+</html>

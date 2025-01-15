@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{Base::layout(~{::section})}">
+<head>
+    <meta charset="UTF-8" />
+    <title>Login Page</title>
+    <link rel="stylesheet" href="/css/login-style.css"> <!-- Link to the CSS file -->
+</head>
+<body>
+
+<section class="login-container">
+
+    <div class="login-card">
+        <!-- Left side - Image -->
+        <div class="login-image">
+            <!-- You can add your image here -->
+            <!-- <div class="image-placeholder">Add Image Here</div> Placeholder for image -->
+            <img src="/img/loginLogo.png/" alt="pic" />
+        </div>
+
+        <!-- Right side - Login Form -->
+        <div class="login-form">
+            <h2>Login</h2>
+            <div th:if="${param.error}" class="alert alert-danger-custom"> Invalid username and password</div>
+            
+            <div th:if="${param.logout}" class="alert alert-success-custom"> You have been logged out</div>
+            
+            <form th:action="@{/signin}" action="#" method="post">
+                <div class="input-container-custom">
+                    <i class="fas fa-user"></i>
+                    <input type="text" placeholder="Username" name="username" required>
+                </div>
+                <div class="input-container-custom">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Password" name="password" required>
+                </div>
+                <button type="submit" class="btn-login-custom">Login</button>
+                <div class="links-custom">
+                    <a href="#" th:href="@{/forgot}">Forgot Password?</a>
+                    <a href="#">Create an account</a>
+                </div>
+            </form>
+
+            <!-- Social Login Section -->
+           
+        </div>
+    </div>
+</section>
+
+</body>
+</html>

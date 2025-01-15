@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+    th:replace="~{NORMAL/Base::layout(~{::section})}">
+<head>
+    <meta charset="UTF-8" />
+    <title>Add Contact</title>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+          integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+<section class="add-contact-section">
+    <form th:action="@{/user/process-contact}" method="post"
+          enctype="multipart/form-data" th:object="${contact}"
+          class="add-contact-form">
+
+        <!-- Alert Message -->
+        <div th:if="${session.message}" th:classappend="${session.message.type}"
+             class="alert-message">
+            <p th:text="${session.message.content}"></p>
+            <th:block th:text="${@sessionHelper.removeMessageFromSession()}"></th:block>
+        </div>
+
+        <h2 class="add-contact-title">Add Contact</h2>
+        <div class="contact-form-grid">
+
+            <!-- First Name -->
+            <div class="contact-input-field">
+                <label for="firstName">First Name</label>
+                <div class="input-wrapper">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="firstName" name="name" placeholder="Enter First Name" required>
+                </div>
+            </div>
+
+            <!-- Second Name -->
+            <div class="contact-input-field">
+                <label for="secondName">Second Name</label>
+                <div class="input-wrapper">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="secondName" name="secondName" placeholder="Enter Second Name" required>
+                </div>
+            </div>
+
+            <!-- Email -->
+            <div class="contact-input-field">
+                <label for="email">Email</label>
+                <div class="input-wrapper">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="email" name="email" placeholder="Enter Email" required>
+                </div>
+            </div>
+
+            <!-- Phone Number -->
+            <div class="contact-input-field">
+                <label for="phone">Phone Number</label>
+                <div class="input-wrapper">
+                    <i class="fas fa-phone"></i>
+                    <input type="number" id="phone" name="phone" placeholder="Enter Phone Number" required>
+                </div>
+            </div>
+
+            <!-- Work -->
+            <div class="contact-input-field">
+                <label for="work">Work</label>
+                <div class="input-wrapper">
+                    <i class="fas fa-briefcase"></i>
+                    <input type="text" id="work" name="work" placeholder="Enter Work" required>
+                </div>
+            </div>
+
+            <!-- Description -->
+            <div class="contact-input-field full-width">
+                <label for="description">Description</label>
+                <textarea id="description" name="description" rows="5" placeholder="Enter Description"></textarea>
+            </div>
+
+            <!-- Image -->
+            <div class="contact-input-field full-width">
+                <label for="image">Image</label>
+                <input type="file" id="image" name="imageurl">
+            </div>
+
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="submit-btn">Add Contact</button>
+    </form>
+</section>
+
+</body>
+</html>
