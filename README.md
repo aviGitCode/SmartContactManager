@@ -1,4 +1,4 @@
-# Smart Contact Manager
+   # Smart Contact Manager
 
 Smart Contact Manager is a web-based application designed to efficiently manage and organize personal and professional contacts. It features a user-friendly interface, secure authentication, and CRUD operations for managing contacts.
 
