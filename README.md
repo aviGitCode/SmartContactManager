@@ -140,5 +140,5 @@ This project is licensed under the MIT License. See the LICENSE file for details
 Contact
 If you have any questions or feedback, feel free to reach out:
 
-Email: your-email@example.com
+Email: avinashkhot351@gmail.com
 GitHub: aviGitCode
